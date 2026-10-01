@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cervical Pain Survey | BPT Physiotherapy</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#eef7f7;color:#263238;line-height:1.5}
+header{background:#00796b;color:#fff;text-align:center;padding:30px 16px}
+header h1{margin:0 0 8px;font-size:28px}header p{margin:0}
+.container{max-width:900px;margin:25px auto;padding:0 15px}.card{background:#fff;border-radius:16px;padding:30px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.section{padding:0 0 24px;margin:0 0 28px;border-bottom:1px solid #ddd}.section:last-of-type{border:0}
+h2{color:#00796b;font-size:21px;margin:0 0 18px}.q{margin:0 0 22px}
+.q>label:first-child,.title{display:block;font-weight:700;margin-bottom:8px}.req{color:#d32f2f}
+input[type=text],input[type=email],select,textarea{width:100%;padding:12px;border:1px solid #bbb;border-radius:8px;font-size:15px;background:#fff}
+textarea{min-height:100px;resize:vertical}.opt{margin:7px 0}.opt label{font-weight:400}
+input[type=radio],input[type=checkbox]{accent-color:#00796b;margin-right:8px}
+.scale{display:grid;grid-template-columns:repeat(11,1fr);gap:5px}.scale label{border:1px solid #ccc;border-radius:6px;padding:7px 2px;text-align:center;cursor:pointer}.scale input{display:none}.scale label:has(input:checked){background:#00796b;color:white}
+button{width:100%;border:0;border-radius:9px;background:#00796b;color:white;font-size:18px;font-weight:700;padding:15px;cursor:pointer}button:disabled{opacity:.6}
+.note{background:#e0f2f1;padding:14px;border-radius:8px;margin-bottom:20px;font-size:14px}.success,.error{display:none;margin-top:16px;padding:14px;border-radius:8px;text-align:center}.success{background:#e8f5e9;color:#2e7d32}.error{background:#ffebee;color:#c62828}
+footer{text-align:center;padding:25px;color:#607d8b;font-size:14px}
+@media(max-width:600px){.card{padding:20px 15px}header h1{font-size:23px}.scale{grid-template-columns:repeat(6,1fr)}}
+</style>
+</head>
+<body>
+<header>
+<h1>Cervical Pain Survey</h1>
+<p>BPT / Physiotherapy Academic Survey</p>
+</header>
+
+<div class="container"><div class="card">
+<div class="note"><strong>Purpose:</strong> This academic survey collects information about cervical/neck pain and associated factors. Participation is voluntary. Please do not enter unnecessary identifying or highly sensitive information.</div>
+
+<form id="surveyForm">
+<div class="section"><h2>1. Participant Consent</h2>
+<div class="q"><span class="title">Do you agree to participate? <span class="req">*</span></span>
+<div class="opt"><label><input type="radio" name="consent" value="Yes" required>Yes, I voluntarily agree.</label></div>
+<div class="opt"><label><input type="radio" name="consent" value="No">No, I do not agree.</label></div></div>
+<div class="q"><span class="title">I understand that my responses will be used for academic/research purposes.</span>
+<div class="opt"><label><input type="radio" name="researchConsent" value="Yes">Yes</label></div>
+<div class="opt"><label><input type="radio" name="researchConsent" value="No">No</label></div></div>
+</div>
+
+<div class="section"><h2>2. Demographic Information</h2>
+<div class="q"><label>Age group <span class="req">*</span></label><select name="age" required><option value="">Select</option><option>18–25 years</option><option>26–35 years</option><option>36–45 years</option><option>46–55 years</option><option>56 years or above</option></select></div>
+<div class="q"><span class="title">Gender</span><div class="opt"><label><input type="radio" name="gender" value="Male">Male</label></div><div class="opt"><label><input type="radio" name="gender" value="Female">Female</label></div><div class="opt"><label><input type="radio" name="gender" value="Prefer not to say">Prefer not to say</label></div><div class="opt"><label><input type="radio" name="gender" value="Other">Other</label></div></div>
+<div class="q"><label>Occupation</label><select name="occupation"><option value="">Select</option><option>Student</option><option>Office/Desk worker</option><option>Teacher</option><option>Healthcare worker</option><option>Manual worker</option><option>Homemaker</option><option>Driver</option><option>Business/Self-employed</option><option>Other</option></select></div>
+<div class="q"><span class="title">Place of residence</span><div class="opt"><label><input type="radio" name="residence" value="Urban">Urban</label></div><div class="opt"><label><input type="radio" name="residence" value="Rural">Rural</label></div><div class="opt"><label><input type="radio" name="residence" value="Semi-urban">Semi-urban</label></div></div>
+<div class="q"><label>Average daily working/sitting time</label><select name="sittingTime"><option>Less than 2 hours</option><option>2–4 hours</option><option>4–6 hours</option><option>6–8 hours</option><option>More than 8 hours</option></select></div>
+</div>
+
+<div class="section"><h2>3. Cervical Pain History</h2>
+<div class="q"><span class="title">Have you experienced neck/cervical pain during the last 3 months?</span><div class="opt"><label><input type="radio" name="neckPain" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="neckPain" value="No">No</label></div></div>
+<div class="q"><label>How long have you experienced neck pain?</label><select name="duration"><option>Less than 1 week</option><option>1–4 weeks</option><option>1–3 months</option><option>More than 3 months</option><option>Recurrent episodes</option></select></div>
+<div class="q"><label>How would you describe your neck pain?</label><select name="severity"><option>Mild</option><option>Moderate</option><option>Severe</option><option>Very severe</option></select></div>
+<div class="q"><span class="title">Where do you mainly feel the pain?</span>
+<div class="opt"><label><input type="checkbox" name="painLocation" value="Centre of neck">Centre of neck</label></div><div class="opt"><label><input type="checkbox" name="painLocation" value="Right side">Right side</label></div><div class="opt"><label><input type="checkbox" name="painLocation" value="Left side">Left side</label></div><div class="opt"><label><input type="checkbox" name="painLocation" value="Both sides">Both sides</label></div><div class="opt"><label><input type="checkbox" name="painLocation" value="Neck and shoulder">Neck and shoulder</label></div><div class="opt"><label><input type="checkbox" name="painLocation" value="Neck to arm">Neck extending toward arm</label></div></div>
+<div class="q"><span class="title">Does your neck pain radiate to your shoulder or arm?</span><div class="opt"><label><input type="radio" name="radiation" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="radiation" value="No">No</label></div><div class="opt"><label><input type="radio" name="radiation" value="Sometimes">Sometimes</label></div></div>
+<div class="q"><span class="title">Associated symptoms</span>
+<div class="opt"><label><input type="checkbox" name="symptoms" value="Stiffness">Stiffness</label></div><div class="opt"><label><input type="checkbox" name="symptoms" value="Headache">Headache</label></div><div class="opt"><label><input type="checkbox" name="symptoms" value="Shoulder pain">Shoulder pain</label></div><div class="opt"><label><input type="checkbox" name="symptoms" value="Tingling/Numbness">Tingling/Numbness</label></div><div class="opt"><label><input type="checkbox" name="symptoms" value="Weakness">Weakness of arm/hand</label></div><div class="opt"><label><input type="checkbox" name="symptoms" value="Reduced movement">Reduced neck movement</label></div><div class="opt"><label><input type="checkbox" name="symptoms" value="Muscle tightness">Muscle tightness</label></div></div>
+</div>
+
+<div class="section"><h2>4. Pain Intensity</h2>
+<div class="q"><span class="title">Current neck pain intensity (0 = no pain, 10 = worst possible pain)</span>
+<div class="scale" id="scale"></div></div>
+<div class="q"><label>When is your neck pain usually worse?</label><select name="painWorse"><option>Morning</option><option>During work</option><option>After prolonged sitting</option><option>After mobile phone use</option><option>After computer/laptop use</option><option>Evening</option><option>During sleep</option><option>On waking</option><option>Other</option></select></div>
+</div>
+
+<div class="section"><h2>5. Lifestyle and Posture</h2>
+<div class="q"><label>Daily smartphone use</label><select name="mobileUse"><option>Less than 1 hour</option><option>1–2 hours</option><option>2–4 hours</option><option>4–6 hours</option><option>More than 6 hours</option></select></div>
+<div class="q"><label>Daily computer/laptop use</label><select name="computerUse"><option>I do not use one</option><option>Less than 2 hours</option><option>2–4 hours</option><option>4–6 hours</option><option>6–8 hours</option><option>More than 8 hours</option></select></div>
+<div class="q"><label>How often do you use your phone with your neck bent forward?</label><select name="forwardNeck"><option>Never</option><option>Rarely</option><option>Sometimes</option><option>Often</option><option>Always</option></select></div>
+<div class="q"><label>Do you sit continuously for more than 1 hour without a break?</label><select name="continuousSitting"><option>Never</option><option>Rarely</option><option>Sometimes</option><option>Often</option><option>Always</option></select></div>
+<div class="q"><span class="title">Do you regularly exercise?</span><div class="opt"><label><input type="radio" name="exercise" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="exercise" value="No">No</label></div></div>
+<div class="q"><label>Usual sitting posture</label><select name="posture"><option>Mostly upright</option><option>Slightly forward</option><option>Frequently slouched</option><option>Very slouched</option><option>Not sure</option></select></div>
+<div class="q"><label>Average sleep duration</label><select name="sleep"><option>Less than 5 hours</option><option>5–6 hours</option><option>6–7 hours</option><option>7–8 hours</option><option>More than 8 hours</option></select></div>
+</div>
+
+<div class="section"><h2>6. Associated Factors</h2>
+<div class="q"><span class="title">Previous neck injury/trauma?</span><div class="opt"><label><input type="radio" name="injury" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="injury" value="No">No</label></div></div>
+<div class="q"><span class="title">Previous road traffic accident/whiplash injury?</span><div class="opt"><label><input type="radio" name="whiplash" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="whiplash" value="No">No</label></div></div>
+<div class="q"><label>Do you experience stress/tension during work or study?</label><select name="stress"><option>Never</option><option>Rarely</option><option>Sometimes</option><option>Often</option><option>Always</option></select></div>
+<div class="q"><label>Difficulty maintaining an upright sitting posture?</label><select name="upright"><option>Never</option><option>Rarely</option><option>Sometimes</option><option>Often</option><option>Always</option></select></div>
+</div>
+
+<div class="section"><h2>7. Functional Problems</h2>
+<div class="q"><label>Does neck pain affect your daily activities?</label><select name="dailyActivities"><option>Not at all</option><option>Slightly</option><option>Moderately</option><option>Severely</option><option>Extremely</option></select></div>
+<div class="q"><label>Does neck pain interfere with work/studies?</label><select name="workImpact"><option>Never</option><option>Rarely</option><option>Sometimes</option><option>Often</option><option>Always</option></select></div>
+<div class="q"><label>Does neck pain make it difficult to turn your head?</label><select name="turnHead"><option>Yes</option><option>No</option><option>Sometimes</option></select></div>
+<div class="q"><label>Does neck pain affect your sleep?</label><select name="sleepImpact"><option>Yes</option><option>No</option><option>Sometimes</option></select></div>
+<div class="q"><label>Does neck pain affect exercise/physical activity?</label><select name="activityImpact"><option>Yes</option><option>No</option><option>Sometimes</option></select></div>
+</div>
+
+<div class="section"><h2>8. Previous Treatment</h2>
+<div class="q"><span class="title">Have you consulted a healthcare professional?</span><div class="opt"><label><input type="radio" name="consulted" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="consulted" value="No">No</label></div></div>
+<div class="q"><span class="title">Have you received physiotherapy treatment?</span><div class="opt"><label><input type="radio" name="physio" value="Yes">Yes</label></div><div class="opt"><label><input type="radio" name="physio" value="No">No</label></div></div>
+<div class="q"><span class="title">Which physiotherapy treatments have you received?</span>
+<div class="opt"><label><input type="checkbox" name="treatment" value="Therapeutic exercises">Therapeutic exercises</label></div><div class="opt"><label><input type="checkbox" name="treatment" value="Manual therapy">Manual therapy</label></div><div class="opt"><label><input type="checkbox" name="treatment" value="TENS">TENS</label></div><div class="opt"><label><input type="checkbox" name="treatment" value="Heat therapy">Heat therapy</label></div><div class="opt"><label><input type="checkbox" name="treatment" value="Cervical traction">Cervical traction</label></div><div class="opt"><label><input type="checkbox" name="treatment" value="Postural education">Postural education</label></div><div class="opt"><label><input type="checkbox" name="treatment" value="Massage">Massage</label></div></div>
+<div class="q"><label>Did physiotherapy improve your symptoms?</label><select name="physioResult"><option>Yes, significantly</option><option>Yes, slightly</option><option>No significant improvement</option><option>Symptoms became worse</option><option>Not applicable</option></select></div>
+</div>
+
+<div class="section"><h2>9. Overall Impact</h2>
+<div class="q"><label>How much does neck pain affect your quality of life?</label><select name="quality"><option>Not at all</option><option>Mildly</option><option>Moderately</option><option>Severely</option><option>Extremely</option></select></div>
+<div class="q"><label>What do you think is the main cause of your neck pain?</label><select name="cause"><option>Prolonged sitting</option><option>Mobile phone use</option><option>Computer/laptop use</option><option>Poor posture</option><option>Work-related activity</option><option>Stress</option><option>Previous injury</option><option>Lack of exercise</option><option>Unknown</option><option>Other</option></select></div>
+<div class="q"><span class="title">What do you think would help reduce your neck pain?</span>
+<div class="opt"><label><input type="checkbox" name="help" value="Exercise">Exercise</label></div><div class="opt"><label><input type="checkbox" name="help" value="Physiotherapy">Physiotherapy</label></div><div class="opt"><label><input type="checkbox" name="help" value="Postural correction">Postural correction</label></div><div class="opt"><label><input type="checkbox" name="help" value="Regular breaks">Regular breaks</label></div><div class="opt"><label><input type="checkbox" name="help" value="Reduced screen time">Reduced screen time</label></div><div class="opt"><label><input type="checkbox" name="help" value="Stress management">Stress management</label></div><div class="opt"><label><input type="checkbox" name="help" value="Better sleeping position">Better sleeping position</label></div></div>
+<div class="q"><label>Additional comments</label><textarea name="comments" placeholder="Optional"></textarea></div>
+</div>
+
+<button id="submitBtn" type="submit">Submit Survey</button>
+<div class="success" id="success">Thank you! Your response has been recorded.</div>
+<div class="error" id="error">Submission failed. Please try again.</div>
+</form>
+</div></div>
+<footer>BPT / Physiotherapy Academic Survey</footer>
+
+<script>
+const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+for(let i=0;i<=10;i++){
+  const label=document.createElement("label");
+  label.innerHTML=`<input type="radio" name="currentPain" value="${i}">${i}`;
+  document.getElementById("scale").appendChild(label);
+}
+
+const form=document.getElementById("surveyForm");
+form.addEventListener("submit",async e=>{
+  e.preventDefault();
+  const consent=form.querySelector('input[name="consent"]:checked');
+  if(!consent || consent.value!=="Yes"){
+    alert("Please provide consent before submitting the survey.");
+    return;
+  }
+  if(GOOGLE_SCRIPT_URL.includes("PASTE_YOUR")){
+    alert("The Google Sheets connection has not been configured yet.");
+    return;
+  }
+
+  const btn=document.getElementById("submitBtn");
+  btn.disabled=true;
+  btn.textContent="Submitting...";
+  document.getElementById("success").style.display="none";
+  document.getElementById("error").style.display="none";
+
+  const data={};
+  new FormData(form).forEach((value,key)=>{
+    if(data[key]) data[key]+=", "+value;
+    else data[key]=value;
+  });
+
+  try{
+    const response=await fetch(GOOGLE_SCRIPT_URL,{
+      method:"POST",
+      mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify(data)
+    });
+    form.reset();
+    document.getElementById("success").style.display="block";
+    window.scrollTo({top:0,behavior:"smooth"});
+  }catch(err){
+    console.error(err);
+    document.getElementById("error").style.display="block";
+  }finally{
+    btn.disabled=false;
+    btn.textContent="Submit Survey";
+  }
+});
+</script>
+</body>
+</html>
